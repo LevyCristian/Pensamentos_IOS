@@ -21,7 +21,8 @@ class QuotesManager {
     }
     
     func getRandomQuote() -> Quote {
-        let index = Int(arc4random_uniform(UInt32(self.quotes.count)))
+        //let index = Int(arc4random_uniform(UInt32(self.quotes.count)))
+        let index = Int.random(0...self.quotes.count)
         return self.quotes[index]
     }
     
